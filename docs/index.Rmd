@@ -20,10 +20,9 @@ The incarceration data that this report is based on is from the Vera Institute. 
 
 _*Key Questions*_
 
-1. What is the United States' average jail population of whites compared to the average jail population of blacks?
-2. How has the United States' total jail population changed over time from the incarceration data between 1970 - 2018?
-3. In certain states, how has the jail population changed between 1970 - 2018?
-4. How much of the total jail population is black in 2018?
+1. How has the United States' total jail population changed over time from the incarceration data between 1970 - 2018?
+2. In certain states, how has the jail population changed between 1970 - 2018?
+3. How much of the total jail population is black in 2018?
 
 ## Section 2: Data Summary 
 
@@ -42,9 +41,8 @@ avg_black_inc()
 avg_white_inc()
 ```
 
-This data shows 
-
 ## Section 3: Growth of the U.S. Prison Population
+
 ```{r echo=F}
 plot_jail_pop_for_us()
 ```
@@ -54,6 +52,7 @@ plot_jail_pop_for_us()
 From this bar chart showing jail population data from 1970 - 2020, we can observe that there was a large uptick in jail population starting in 1980 and has been steady since ~2010.This answers the question, "How has the United States' total jail population changed over time from the incarceration data between 1970 - 2018?".
 
 ## Section 4: Growth of Prison Population by State
+
 ```{r echo=F}
 plot_jail_pop_by_states()
 ```

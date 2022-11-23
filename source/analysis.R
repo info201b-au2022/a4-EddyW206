@@ -95,7 +95,7 @@ plot_jail_pop_by_states()
 # Your functions might go here ... <todo:  update comment>
 # See Canvas
 #----------------------------------------------------------------------------#
-# Comparison of total black population vs total black jail population & total white population vs total white jail population
+# Comparison of total jail population vs total black jail population & total white population vs total jail population
 
 # total_black <- df %>%
 #   group_by(year) %>%
