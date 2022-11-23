@@ -1,45 +1,75 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Incarceration Inequality"
+author: "Eddy Wong"
+date: '2022-11-18'
 output: html_document
 ---
 
 ```{r echo=FALSE, eval=TRUE, message=FALSE}
-source("../source/a4-helpers.R")
-source("../source/analysis.R")
+source("C:/Users/eddyw/Documents/Info 201/Assignments/a4-EddyW206/source/analysis.R")
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
-
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
+The United States Jail Population data has opened the eyes of many across the country. Evidence of over-policing, abuse of power, and the targeted incarceration of African Americans. The data pulled from the incarceration data (1970 - 2018) will demonstrate these claims.
 
 ## Introduction 
-[TODO]
+The incarceration data that this report is based on is from the Vera Institute. The report sheds light upon the inequality of justice in the United States judicial system. There is a problem in the United States with overcriminalization and racial profiling. A quote from the Vera.org website, "Black men comprise about 13% of the population, but 35% of the incarcerated." This incredibly shocking fact that has opened the eyes of many to question what is really going on. Direct Stakeholders of this report would be the citizens of the United States as it shows them the data of the inequalities in our judicial system. Indirect stakeholders of this report would be the United States government as this data would reform the policies and power that they have in incarcerating citizens of the United States.
 
-## Data Summary 
-[TODO]
+_*Key Questions*_
 
-[TODO ... other sections ... See Canvas for details]
+1. What is the United States' average jail population of whites compared to the average jail population of blacks?
+2. How has the United States' total jail population changed over time from the incarceration data between 1970 - 2018?
+3. In certain states, how has the jail population changed between 1970 - 2018?
+4. How much of the total jail population is black in 2018?
 
-_All the very best with your work!_
+## Section 2: Data Summary 
 
+*Average jail population of all states combined in 2018*
+```{r echo = f}
+avg_jail_pop()
+```
+
+*Average jail population of blacks in 2018*
+```{r echo = f}
+avg_black_inc()
+```
+
+*Average jail population of whites in 2018*
+```{r echo = f}
+avg_white_inc()
+```
+
+This data shows 
+
+## Section 3: Growth of the U.S. Prison Population
+```{r echo=F}
+plot_jail_pop_for_us()
+```
+
+#### Bar Chart of the growth of total jail population in the United States (1970 -2018)
+
+From this bar chart showing jail population data from 1970 - 2020, we can observe that there was a large uptick in jail population starting in 1980 and has been steady since ~2010.This answers the question, "How has the United States' total jail population changed over time from the incarceration data between 1970 - 2018?".
+
+## Section 4: Growth of Prison Population by State
+```{r echo=F}
+plot_jail_pop_by_states()
+```
+
+#### Line chart of the total jail population by state in the United States (1970 - 2018)
+
+Through this line chart, we can observe that the jail population of these states all have an upward trend. I chose these states for the reason that their locations are spread across the country, having at least one state from the west, south, and east. This answers the question, "In certain states, how has the jail population changed between 1970 - 2018?".
+
+## Section 5:
+
+## Section 6:
+
+```{r echo=f}
+map_ine()
+```
+
+#### Heat map of the total black population jailed compared to total jail population (2018)
+
+The heat map gives a visualisation of the United States and shows which states have higher ratios of total black jail population to total jail population. This answers the question, "How much of the total jail population is black in 2018?".
